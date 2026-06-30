@@ -24,11 +24,11 @@ export function NotificationsPage() {
   const unreadCount = 2;
 
   const handleFilterChange = (newFilter) => {
-
+      setFilter(newFilter);
   };
 
   const handlePageChange = (_, newPage) => {
-
+    setPage(newPage);
   };
 
   return (
@@ -58,14 +58,14 @@ export function NotificationsPage() {
         <Alert severity="error">Failed to load notifications: {error}</Alert>
       )}
 
-      {loading && !error && notifications.length == "0" && (
+      {loading && !error && notifications.length == "0" (
         <Alert severity="info">Something message</Alert>
       )}
 
       {loading && !error && notifications.length > 0 && (
         <Stack spacing={1.5}>
-          {notifications.map((n) => (
-            <></>
+          {notifications.map((notifications) => (
+            <NotificationCard key = {notification.id} notification = {notification} />
           ))}
         </Stack>
       )}
