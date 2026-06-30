@@ -4,9 +4,9 @@ import { NotificationsPage } from './pages/NotificationsPage';
 function App(){
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element = {<NotificationsPage/>} />
-    </Routes>
+      <Routes>
+         <Route path='/' element = {<NotificationsPage/>} />
+      </Routes>
     </BrowserRouter>
   );
 }
